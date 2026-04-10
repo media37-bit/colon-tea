@@ -3,91 +3,145 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>الخلطة الطبيعية للراحة اليومية</title>
-    
-    <style>
-        /* تصميم عصري ومناسب للهواتف */
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 0; background-color: #f9f9f9; color: #333; }
-        .container { max-width: 500px; margin: auto; background-color: white; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
-        
-        /* القسم العلوي (الخطاف) */
-        .header { background-color: #28a745; color: white; padding: 20px; text-align: center; }
-        .header h1 { margin: 0; font-size: 24px; }
-        
-        /* قسم الفيديو/الصورة */
-        .hero-section { padding: 15px; text-align: center; }
-        .hero-section img { width: 100%; border-radius: 10px; }
-        .price-tag { font-size: 28px; color: #d9534f; font-weight: bold; margin: 10px 0; }
-        
-        /* قسم الفوائد */
-        .benefits { padding: 20px; background-color: #f1fdf4; border-top: 2px solid #28a745; border-bottom: 2px solid #28a745; }
-        .benefits ul { list-style-type: "✔️ "; padding-right: 20px; font-size: 18px; line-height: 1.8; }
-        
-        /* قسم المراجعات */
-        .reviews { padding: 20px; }
-        .review-box { background-color: #f8f9fa; padding: 15px; border-radius: 8px; margin-bottom: 15px; border-right: 4px solid #ffc107; }
-        .review-box h4 { margin: 0 0 5px 0; color: #333; }
-        .review-box p { margin: 0; font-size: 14px; color: #555; }
-        
-        /* قسم الطلب (الكود الخاص بك) */
-        .form-section { padding: 30px 20px; background-color: #fff; text-align: center; }
-        input { width: 90%; padding: 15px; margin: 10px 0; border: 1px solid #ccc; border-radius: 8px; font-size: 16px; }
-        button { width: 95%; padding: 15px; background-color: #28a745; color: white; border: none; border-radius: 8px; font-size: 20px; font-weight: bold; cursor: pointer; animation: pulse 2s infinite; }
-        button:hover { background-color: #218838; }
-        
-        /* تأثير النبض للزر لجذب الانتباه */
-        @keyframes pulse { 0% { transform: scale(1); } 50% { transform: scale(1.02); } 100% { transform: scale(1); } }
-    </style>
+    <title>الخلطة الطبيعية للراحة اليومية - كولون تي</title>
+    <meta name="description" content="الخلطة الطبيعية 100% المصنوعة من أعشاب مغربية مختارة بعناية لتريح معدتك وتخلصك من النفخة. اطلب الآن والدفع عند الاستلام.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
-<div class="container">
+<nav class="navbar">
+    <a href="index.html" class="brand"><i class="fa-solid fa-leaf"></i> طبيعة تي</a>
+</nav>
 
-    <div class="header">
+<section class="hero">
+    <div class="hero-content">
+        <div class="price-badge">فقط بـ 199 درهم</div>
         <h1>السر اللي هناني من نفخة الكرش والثقل بعد الماكلة</h1>
-    </div>
-
-    <div class="hero-section">
-        <img src="https://images.unsplash.com/photo-1597481499750-3e6b22637e12?auto=format&fit=crop&q=80&w=800" alt="كوب شاي طبيعي">
-        <p>الخلطة الطبيعية 100% المصنوعة من أعشاب مغربية مختارة بعناية لتريح معدتك.</p>
-        <div class="price-tag">فقط بـ 199 درهم</div>
-        <p style="color: #28a745; font-weight: bold;">🚚 التوصيل مجاني لجميع المدن</p>
-    </div>
-
-    <div class="benefits">
-        <h3 style="text-align: center; color: #28a745;">علاش هاد الخلطة غتنفعك؟</h3>
-        <ul>
-            <li>كتهدّن المعدة وكتنقص من الغازات المزعجة.</li>
-            <li>كتخليك تنعس مرتاح بلا حريق ولا ثقل.</li>
-            <li>مذاقها زوين ومنعش، ماشي بحال الدوا.</li>
-            <li>طبيعية 100% وبدون أي مواد كيماوية.</li>
-        </ul>
-    </div>
-
-    <div class="reviews">
-        <h3 style="text-align: center;">آراء الكليان ديالنا</h3>
-        <div class="review-box">
-            <h4>⭐⭐⭐⭐⭐ محمد (الدار البيضاء)</h4>
-            <p>"صراحة منتج واعر، كنت ديما كنخاف ناكل بالليل على قبل النفخة، دابا وليت كنشرب كاس مورا العشا وكنعس مخير."</p>
+        <p>الخلطة الطبيعية 100% المصنوعة من أعشاب مغربية مختارة بعناية لتريح معدتك وتمنحك شعوراً بالخفة والحيوية.</p>
+        <div style="font-weight: bold; color: var(--primary); margin-bottom: 2rem; font-size: 1.2rem;">
+            <i class="fa-solid fa-truck-fast"></i> التوصيل مجاني لجميع المدن والدفع عند الاستلام
         </div>
-        <div class="review-box">
-            <h4>⭐⭐⭐⭐⭐ فاطمة (أكادير)</h4>
-            <p>"شكراً لكم بزاف، ريحتها زوينة وكتعطي نتيجة من الأيام الأولى. غنطلب جوج قرعات خرين لراجلي."</p>
+        <a href="#order-section" class="btn btn-pulse">اطلب الآن - الدفع بعد الاستلام</a>
+    </div>
+    <div class="hero-image">
+        <img src="https://images.unsplash.com/photo-1597481499750-3e6b22637e12?auto=format&fit=crop&q=80&w=800" alt="كوب شاي طبيعي من الأعشاب">
+    </div>
+</section>
+
+<section class="benefits">
+    <h2 class="section-title">علاش هاد الخلطة غتنفعك؟</h2>
+    <div class="benefits-grid">
+        <div class="benefit-card">
+            <div class="benefit-icon"><i class="fa-solid fa-wind"></i></div>
+            <h3>تهدئة المعدة</h3>
+            <p>كتهدّن المعدة وكتنقص من الغازات المزعجة بطريقة طبيعية وفعالة وبدون آثار جانبية.</p>
+        </div>
+        <div class="benefit-card">
+            <div class="benefit-icon"><i class="fa-solid fa-bed"></i></div>
+            <h3>نوم مريح</h3>
+            <p>كتخليك تنعس مرتاح بلا حريق ولا ثقل في البطن، خاصة بعد وجبة العشاء الدسمة.</p>
+        </div>
+        <div class="benefit-card">
+            <div class="benefit-icon"><i class="fa-solid fa-mug-hot"></i></div>
+            <h3>مذاق منعش</h3>
+            <p>مذاقها زوين ومنعش، ماشي بحال الدوا، وتقدر تشربها بحب وتستمتع بنكهتها الفريدة.</p>
+        </div>
+        <div class="benefit-card">
+            <div class="benefit-icon"><i class="fa-solid fa-leaf"></i></div>
+            <h3>طبيعية 100%</h3>
+            <p>مصنوعة بالكامل من أعشاب مغربية طبيعية خالصة بدون أي إضافات كيماوية ومواد حافظة.</p>
         </div>
     </div>
+</section>
 
-    <div class="form-section">
-        <h2 style="color: #d9534f;">الكمية محدودة! اطلب الآن</h2>
-        <p>الدفع لا يكون إلا بعد استلام المنتج والتأكد منه</p>
-        
+<section class="how-to-use" style="background-color: var(--white);">
+    <h2 class="section-title">طريقة الاستعمال بكل بساطة</h2>
+    <div class="steps">
+        <div class="step">
+            <div class="step-number">1</div>
+            <div>
+                <h3>أضف ملعقة</h3>
+                <p>قم بوضع ملعقة صغيرة من الخلطة العشبية في كوب فارغ ونظيف.</p>
+            </div>
+        </div>
+        <div class="step">
+            <div class="step-number">2</div>
+            <div>
+                <h3>اسكب الماء الساخن</h3>
+                <p>اسكب الماء الساخن المغلي في الكوب واترك الأعشاب تنقع لمدة 5 إلى 10 دقائق لتتحرر فوائدها.</p>
+            </div>
+        </div>
+        <div class="step">
+            <div class="step-number">3</div>
+            <div>
+                <h3>استمتع بالراحة</h3>
+                <p>اشرب الكوب بعد العشاء أو عند الشعور بالانتفاخ والغازات، واستمتع براحة فورية ومعدة هادئة.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="reviews">
+    <h2 class="section-title">آراء الكليان ديالنا</h2>
+    <div class="reviews-grid">
+        <div class="review-card">
+            <div class="review-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+            <p class="review-text">"صراحة منتج واعر، كنت ديما كنخاف ناكل بالليل على قبل النفخة، دابا وليت كنشرب كاس مورا العشا وكنعس مخير وبدون إزعاج."</p>
+            <p class="reviewer-name">- محمد (الدار البيضاء)</p>
+        </div>
+        <div class="review-card">
+            <div class="review-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+            <p class="review-text">"شكراً لكم بزاف، ريحتها زوينة وكتعطي نتيجة من الأيام الأولى. غنطلب جوج قرعات خرين لراجلي."</p>
+            <p class="reviewer-name">- فاطمة (أكادير)</p>
+        </div>
+        <div class="review-card">
+            <div class="review-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i></div>
+            <p class="review-text">"التوصيل كان سريع والتعامل جد محترف. العشوب نقيين وباينة فيهم الجودة. هناني من القبط والوجع."</p>
+            <p class="reviewer-name">- هشام (طنجة)</p>
+        </div>
+    </div>
+</section>
+
+<section id="order-section" class="order-section">
+    <h2 class="section-title" style="color: white;">الكمية محدودة! اطلب الآن</h2>
+    <p style="margin-bottom: 2rem; font-size: 1.2rem;">الدفع لا يكون إلا بعد استلام المنتج والتأكد منه</p>
+    
+    <div class="form-container">
         <form id="orderForm">
-            <input type="text" id="customerName" placeholder="الاسم الكامل" required>
-            <input type="tel" id="customerPhone" placeholder="رقم الهاتف" required>
-            <button type="submit" id="submitBtn">أرسل الطلب الآن</button>
+            <div class="form-group">
+                <label for="customerName">الاسم الكامل</label>
+                <input type="text" id="customerName" class="form-control" placeholder="أدخل اسمك الكامل هنا" required>
+            </div>
+            <div class="form-group">
+                <label for="customerPhone">رقم الهاتف</label>
+                <input type="tel" id="customerPhone" class="form-control" placeholder="06XXXXXXXX أو 07XXXXXXXX" required>
+            </div>
+            <button type="submit" id="submitBtn" class="btn btn-pulse">أرسل الطلب الآن</button>
         </form>
     </div>
+</section>
 
+<!-- Mobile Sticky CTA -->
+<div class="sticky-cta">
+    <a href="#order-section" class="btn btn-pulse">اطلب الآن بـ 199 درهم</a>
 </div>
+
+<!-- WhatsApp Float (Edit number later) -->
+<a href="https://wa.me/212600000000" class="whatsapp-float" target="_blank">
+    <i class="fa-brands fa-whatsapp"></i>
+</a>
+
+<footer>
+    <div class="footer-links">
+        <a href="index.html">الرئيسية</a>
+        <a href="return-policy.html">سياسة الاسترجاع والتوصيل</a>
+        <a href="privacy-policy.html">سياسة الخصوصية</a>
+        <a href="terms.html">شروط الاستخدام</a>
+    </div>
+    <p class="footer-text">© 2026 طبيعة تي - جميع الحقوق محفوظة.</p>
+    <p class="footer-text">هذا الموقع ليس جزءاً من موقع فيسبوك أو شركة ميتا. هذا الموقع غير مدعوم بأي شكل من الأشكال من قبل فيسبوك.</p>
+</footer>
 
 <script>
     document.getElementById('orderForm').addEventListener('submit', function(e) {
