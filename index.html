@@ -169,9 +169,7 @@
                 fbq('track', 'Purchase', {currency: 'MAD', value: 199.00});
             }
 
-            alert('تم تسجيل طلبك بنجاح! سنتصل بك قريباً لتأكيد الطلب.');
-            document.getElementById('orderForm').reset(); 
-            btn.innerText = "أرسل الطلب الآن";
+            window.location.href = 'thank-you.html';
         })
         .catch(error => {
             alert('حدث خطأ في الاتصال. المرجو المحاولة مجدداً.');
