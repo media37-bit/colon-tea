@@ -3,66 +3,128 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>طلب خلطة القولون</title>
+    <title>الخلطة الطبيعية للراحة اليومية</title>
+    
     <style>
-        body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; }
-        .form-container { max-width: 400px; margin: auto; padding: 20px; border: 1px solid #ccc; border-radius: 10px; }
-        input { width: 90%; padding: 10px; margin: 10px 0; border: 1px solid #ccc; border-radius: 5px; }
-        button { width: 95%; padding: 10px; background-color: #28a745; color: white; border: none; border-radius: 5px; font-size: 18px; cursor: pointer; }
+        /* تصميم عصري ومناسب للهواتف */
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 0; background-color: #f9f9f9; color: #333; }
+        .container { max-width: 500px; margin: auto; background-color: white; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        
+        /* القسم العلوي (الخطاف) */
+        .header { background-color: #28a745; color: white; padding: 20px; text-align: center; }
+        .header h1 { margin: 0; font-size: 24px; }
+        
+        /* قسم الفيديو/الصورة */
+        .hero-section { padding: 15px; text-align: center; }
+        .hero-section img { width: 100%; border-radius: 10px; }
+        .price-tag { font-size: 28px; color: #d9534f; font-weight: bold; margin: 10px 0; }
+        
+        /* قسم الفوائد */
+        .benefits { padding: 20px; background-color: #f1fdf4; border-top: 2px solid #28a745; border-bottom: 2px solid #28a745; }
+        .benefits ul { list-style-type: "✔️ "; padding-right: 20px; font-size: 18px; line-height: 1.8; }
+        
+        /* قسم المراجعات */
+        .reviews { padding: 20px; }
+        .review-box { background-color: #f8f9fa; padding: 15px; border-radius: 8px; margin-bottom: 15px; border-right: 4px solid #ffc107; }
+        .review-box h4 { margin: 0 0 5px 0; color: #333; }
+        .review-box p { margin: 0; font-size: 14px; color: #555; }
+        
+        /* قسم الطلب (الكود الخاص بك) */
+        .form-section { padding: 30px 20px; background-color: #fff; text-align: center; }
+        input { width: 90%; padding: 15px; margin: 10px 0; border: 1px solid #ccc; border-radius: 8px; font-size: 16px; }
+        button { width: 95%; padding: 15px; background-color: #28a745; color: white; border: none; border-radius: 8px; font-size: 20px; font-weight: bold; cursor: pointer; animation: pulse 2s infinite; }
         button:hover { background-color: #218838; }
+        
+        /* تأثير النبض للزر لجذب الانتباه */
+        @keyframes pulse { 0% { transform: scale(1); } 50% { transform: scale(1.02); } 100% { transform: scale(1); } }
     </style>
-
-    </head>
+</head>
 <body>
 
-    <div class="form-container">
-        <h2>اطلب الآن والدفع عند الاستلام</h2>
+<div class="container">
+
+    <div class="header">
+        <h1>السر اللي هناني من نفخة الكرش والثقل بعد الماكلة</h1>
+    </div>
+
+    <div class="hero-section">
+        <img src="https://images.unsplash.com/photo-1597481499750-3e6b22637e12?auto=format&fit=crop&q=80&w=800" alt="كوب شاي طبيعي">
+        <p>الخلطة الطبيعية 100% المصنوعة من أعشاب مغربية مختارة بعناية لتريح معدتك.</p>
+        <div class="price-tag">فقط بـ 199 درهم</div>
+        <p style="color: #28a745; font-weight: bold;">🚚 التوصيل مجاني لجميع المدن</p>
+    </div>
+
+    <div class="benefits">
+        <h3 style="text-align: center; color: #28a745;">علاش هاد الخلطة غتنفعك؟</h3>
+        <ul>
+            <li>كتهدّن المعدة وكتنقص من الغازات المزعجة.</li>
+            <li>كتخليك تنعس مرتاح بلا حريق ولا ثقل.</li>
+            <li>مذاقها زوين ومنعش، ماشي بحال الدوا.</li>
+            <li>طبيعية 100% وبدون أي مواد كيماوية.</li>
+        </ul>
+    </div>
+
+    <div class="reviews">
+        <h3 style="text-align: center;">آراء الكليان ديالنا</h3>
+        <div class="review-box">
+            <h4>⭐⭐⭐⭐⭐ محمد (الدار البيضاء)</h4>
+            <p>"صراحة منتج واعر، كنت ديما كنخاف ناكل بالليل على قبل النفخة، دابا وليت كنشرب كاس مورا العشا وكنعس مخير."</p>
+        </div>
+        <div class="review-box">
+            <h4>⭐⭐⭐⭐⭐ فاطمة (أكادير)</h4>
+            <p>"شكراً لكم بزاف، ريحتها زوينة وكتعطي نتيجة من الأيام الأولى. غنطلب جوج قرعات خرين لراجلي."</p>
+        </div>
+    </div>
+
+    <div class="form-section">
+        <h2 style="color: #d9534f;">الكمية محدودة! اطلب الآن</h2>
+        <p>الدفع لا يكون إلا بعد استلام المنتج والتأكد منه</p>
+        
         <form id="orderForm">
             <input type="text" id="customerName" placeholder="الاسم الكامل" required>
             <input type="tel" id="customerPhone" placeholder="رقم الهاتف" required>
-            <button type="submit" id="submitBtn">تأكيد الطلب</button>
+            <button type="submit" id="submitBtn">أرسل الطلب الآن</button>
         </form>
     </div>
 
-    <script>
-        document.getElementById('orderForm').addEventListener('submit', function(e) {
-            e.preventDefault(); 
+</div>
 
-            const name = document.getElementById('customerName').value;
-            const phone = document.getElementById('customerPhone').value;
-            const btn = document.getElementById('submitBtn');
+<script>
+    document.getElementById('orderForm').addEventListener('submit', function(e) {
+        e.preventDefault(); 
 
-            // 👇 ضع رابط Google Apps Script (Web app URL) هنا 👇
-            const googleScriptUrl = 'https://script.google.com/macros/s/AKfycbxHRdwh_QKZpCKHcMYcqX7fDmUAqUczB2J1zdOsEOypMTo9J_ZvcedDJ7Sa6z4tgml0/exec';
-            
-            const payload = {
-                name: name,
-                phone: phone
-            };
+        const name = document.getElementById('customerName').value;
+        const phone = document.getElementById('customerPhone').value;
+        const btn = document.getElementById('submitBtn');
 
-            btn.innerText = "جاري الإرسال...";
+        // 👇👇 ضع الرابط الجديد لـ Google Script الخاص بك هنا 👇👇
+        const googleScriptUrl = 'https://script.google.com/macros/s/AKfycbxHRdwh_QKZpCKHcMYcqX7fDmUAqUczB2J1zdOsEOypMTo9J_ZvcedDJ7Sa6z4tgml0/exec';
+        
+        const payload = { name: name, phone: phone };
+        btn.innerText = "جاري الإرسال...";
 
-            // تعديل بسيط لتجاوز حماية المتصفح (CORS)
-            fetch(googleScriptUrl, {
-                method: 'POST',
-                mode: 'no-cors', // هذه الكلمة السحرية تمنع المتصفح من حظر الطلب
-                body: JSON.stringify(payload),
-                headers: {
-                    'Content-Type': 'text/plain;charset=utf-8',
-                }
-            })
-            .then(() => {
-                // في حالة no-cors لا ننتظر رداً مفصلاً من جوجل، نعتبر الإرسال ناجحاً
-                alert('تم تسجيل طلبك بنجاح! سنتصل بك قريباً.');
-                document.getElementById('orderForm').reset(); 
-                btn.innerText = "تأكيد الطلب";
-            })
-            .catch(error => {
-                console.error('تفاصيل الخطأ:', error);
-                alert('حدث خطأ في الاتصال. المرجو المحاولة مجدداً.');
-                btn.innerText = "تأكيد الطلب";
-            });
+        fetch(googleScriptUrl, {
+            method: 'POST',
+            mode: 'no-cors', 
+            body: JSON.stringify(payload),
+            headers: { 'Content-Type': 'text/plain;charset=utf-8' }
+        })
+        .then(() => {
+            // 🟢 كود البيكسل 🟢
+            if (typeof fbq !== 'undefined') {
+                fbq('track', 'Purchase', {currency: 'MAD', value: 199.00});
+            }
+
+            alert('تم تسجيل طلبك بنجاح! سنتصل بك قريباً لتأكيد الطلب.');
+            document.getElementById('orderForm').reset(); 
+            btn.innerText = "أرسل الطلب الآن";
+        })
+        .catch(error => {
+            alert('حدث خطأ في الاتصال. المرجو المحاولة مجدداً.');
+            btn.innerText = "أرسل الطلب الآن";
         });
-    </script>
+    });
+</script>
+
 </body>
 </html>
