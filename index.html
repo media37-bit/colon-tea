@@ -11,7 +11,8 @@
         button { width: 95%; padding: 10px; background-color: #28a745; color: white; border: none; border-radius: 5px; font-size: 18px; cursor: pointer; }
         button:hover { background-color: #218838; }
     </style>
-</head>
+
+    </head>
 <body>
 
     <div class="form-container">
@@ -25,41 +26,50 @@
 
     <script>
         document.getElementById('orderForm').addEventListener('submit', function(e) {
-            e.preventDefault(); // منع إعادة تحميل الصفحة
+            e.preventDefault(); 
 
-            // 1. جمع البيانات من الفورم
             const name = document.getElementById('customerName').value;
             const phone = document.getElementById('customerPhone').value;
             const btn = document.getElementById('submitBtn');
 
-            // 2. إعدادات تليجرام (ضع بياناتك هنا)
-            const botToken = '8725836485:AAEiTpic9Oo0HwbCFRHcQO7me6-z8zIoptw'
-            const chatId = '7590944205'
-
-            // 3. تنسيق الرسالة التي ستصلك
-            const message = `🚨 طلب جديد (منتج القولون) 🚨%0A%0A👤 الاسم: ${name}%0A📱 الهاتف: ${phone}`;
-
-            // 4. إرسال البيانات عبر API تليجرام
-            const url = `https://api.telegram.org/bot${botToken}/sendMessage?chat_id=${chatId}&text=${message}`;
+            // 👇 ضع رابط Google Apps Script (Web app URL) هنا 👇
+            const googleScriptUrl = 'https://script.google.com/macros/s/AKfycbyOqkQatKQgUkWdzl-8LBd6NbviaRVxOW-YvvsLWu0xHpT8x-2oqO2IP9A9EOlg8qB8/exec';
+            
+            const payload = {
+                name: name,
+                phone: phone
+            };
 
             btn.innerText = "جاري الإرسال...";
 
-            fetch(url)
-                .then(response => {
-                    if(response.ok) {
-                        alert('تم تسجيل طلبك بنجاح! سنتصل بك قريباً.');
-                        document.getElementById('orderForm').reset(); // إفراغ الخانات
-                        btn.innerText = "تأكيد الطلب";
-                    } else {
-                        alert('حدث خطأ، يرجى المحاولة مرة أخرى.');
-                        btn.innerText = "تأكيد الطلب";
+            fetch(googleScriptUrl, {
+                method: 'POST',
+                body: JSON.stringify(payload),
+                headers: {
+                    'Content-Type': 'text/plain;charset=utf-8',
+                }
+            })
+            .then(response => response.json())
+            .then(data => {
+                if(data.status === "success") {
+                    
+                    // 🟢 تسجيل حدث الشراء (Purchase) في البيكسل بنجاح 🟢
+                    if (typeof fbq !== 'undefined') {
+                        fbq('track', 'Purchase', {currency: 'MAD', value: 299.00});
                     }
-                })
-                .catch(error => {
-                    console.error('Error:', error);
-                    alert('حدث خطأ في الاتصال.');
+
+                    alert('تم تسجيل طلبك بنجاح! سنتصل بك قريباً.');
+                    document.getElementById('orderForm').reset(); 
                     btn.innerText = "تأكيد الطلب";
-                });
+                } else {
+                    alert('حدث خطأ، يرجى المحاولة مرة أخرى.');
+                    btn.innerText = "تأكيد الطلب";
+                }
+            })
+            .catch(error => {
+                alert('حدث خطأ في الاتصال.');
+                btn.innerText = "تأكيد الطلب";
+            });
         });
     </script>
 </body>
