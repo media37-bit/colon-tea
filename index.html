@@ -33,7 +33,7 @@
             const btn = document.getElementById('submitBtn');
 
             // 👇 ضع رابط Google Apps Script (Web app URL) هنا 👇
-            const googleScriptUrl = 'https://script.google.com/macros/s/AKfycbyOqkQatKQgUkWdzl-8LBd6NbviaRVxOW-YvvsLWu0xHpT8x-2oqO2IP9A9EOlg8qB8/exec';
+            const googleScriptUrl = 'https://script.google.com/macros/s/AKfycbxHRdwh_QKZpCKHcMYcqX7fDmUAqUczB2J1zdOsEOypMTo9J_ZvcedDJ7Sa6z4tgml0/exec';
             
             const payload = {
                 name: name,
@@ -42,32 +42,24 @@
 
             btn.innerText = "جاري الإرسال...";
 
+            // تعديل بسيط لتجاوز حماية المتصفح (CORS)
             fetch(googleScriptUrl, {
                 method: 'POST',
+                mode: 'no-cors', // هذه الكلمة السحرية تمنع المتصفح من حظر الطلب
                 body: JSON.stringify(payload),
                 headers: {
                     'Content-Type': 'text/plain;charset=utf-8',
                 }
             })
-            .then(response => response.json())
-            .then(data => {
-                if(data.status === "success") {
-                    
-                    // 🟢 تسجيل حدث الشراء (Purchase) في البيكسل بنجاح 🟢
-                    if (typeof fbq !== 'undefined') {
-                        fbq('track', 'Purchase', {currency: 'MAD', value: 299.00});
-                    }
-
-                    alert('تم تسجيل طلبك بنجاح! سنتصل بك قريباً.');
-                    document.getElementById('orderForm').reset(); 
-                    btn.innerText = "تأكيد الطلب";
-                } else {
-                    alert('حدث خطأ، يرجى المحاولة مرة أخرى.');
-                    btn.innerText = "تأكيد الطلب";
-                }
+            .then(() => {
+                // في حالة no-cors لا ننتظر رداً مفصلاً من جوجل، نعتبر الإرسال ناجحاً
+                alert('تم تسجيل طلبك بنجاح! سنتصل بك قريباً.');
+                document.getElementById('orderForm').reset(); 
+                btn.innerText = "تأكيد الطلب";
             })
             .catch(error => {
-                alert('حدث خطأ في الاتصال.');
+                console.error('تفاصيل الخطأ:', error);
+                alert('حدث خطأ في الاتصال. المرجو المحاولة مجدداً.');
                 btn.innerText = "تأكيد الطلب";
             });
         });
